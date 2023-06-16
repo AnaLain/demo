@@ -12,7 +12,6 @@ import com.example.demo.model.dto.Producto;
 @FeignClient(name = "integracion-db", url = "http://localhost:8181")
 public interface ProductoFeignClient {
     
-    
     @GetMapping(path = "/producto", produces = {"application/json"})
     public List<Producto> getAll();
 

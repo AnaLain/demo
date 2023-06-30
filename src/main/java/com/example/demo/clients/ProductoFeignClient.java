@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.demo.model.dto.Producto;
 
-@FeignClient(name = "integracion-db", url = "http://localhost:8181")
+@FeignClient(name = "integracion-db", url = "http://localhost:8383/producto-db")
 public interface ProductoFeignClient {
     
     @GetMapping(path = "/producto", produces = {"application/json"})
